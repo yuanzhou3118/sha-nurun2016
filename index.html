@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>牛趴猴赛雷Nu Party Invitation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        overflow: hidden;
+        
+        text-align: center;
+        font-size: 18px;
+        background: #dc2027;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: block;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    *{margin: 0;padding: 0;width: 100%;box-sizing: border-box;}
+    img{width: 100%;display: block; height: 100%;margin: 0 auto;}
+   .img1{width: 4.5rem;bottom: 1rem;left:0.95rem;position: absolute;height: 4.5rem;}
+   .img2{width: 6.4rem;bottom: 0rem;left:0rem;position: absolute;height: 6.42rem;}
+   .f1 {position: absolute;top: 0;left: 0;width: 1.29rem;height:2.65rem;}
+   .f2 {position: absolute;top: 0;right: 0;width: 1.54rem;height:2.33rem;}
+   .page1 {width: 4.5rem;height: 4.45rem;position: absolute;top: 0.2rem;left: 0.9rem;}
+   .page2 {width: 5.04rem;height:9.37rem;position: absolute;top: 0.4rem;left: 0.7rem;}
+   .page31 {width: 4.71rem;height:7.15rem;position: absolute;top: 1.2rem;left: 0.86rem;}
+   .page32 {width: 3.85rem;height:0.41rem;position: absolute;bottom: 0.5rem;left: 0.4rem;}
+   .icon {position: absolute;top: -999%;left: 0;}
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <img src="images/icon.jpg" height="300" width="300" alt="icon" class="icon">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/p1_bg_01.jpg">
+                <img src="images/page1_03.png" class="page1">
+                <img src="images/4.png" id="img1" class="img1" style="border:0;">
+                <img src="images/5.png" class="img2"  id="img2" style="border:0;display:block;">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/p2_bg.jpg">
+                <img src="images/page2_04.png" class="page2">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/p3_bg_07.jpg">
+                <img src="images/page3_1_08.png" class="page31">
+                <img src="images/page3_2_12.png" class="page32">
+            </div>
+        </div>
+        <!-- Add Pagination -->
+    </div>
+    <audio autoplay="autoplay" loop="loop" preload="auto">
+        <source src="bg-music/audio.mp3" type="audio/mp3">
+    </audio>
+    
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        direction: 'vertical'
+    });
+    </script>
+    <script type="text/javascript">
+        var img2 = document.getElementById("img2");
+        var timer = setInterval(function(){
+            if (img2.style.display == "block") {
+                img2.style.display = "none";
+            } else {
+                img2.style.display = "block";
+            }
+        }, 500);
+        var audio = document.getElementsByTagName('audio')[0];
+        document.body.ontouchstart = function() {
+            audio.play();
+        }
+    </script>
+</body>
+</html>
